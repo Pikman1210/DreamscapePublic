@@ -73,3 +73,6 @@ crashlytics-build.properties
 
 # Plugins
 /[Aa]ssets/[Pp]lugins/QFSW/*
+
+# Misc
+desktop.ini
