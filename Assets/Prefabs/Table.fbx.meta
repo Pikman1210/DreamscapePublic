@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 06c0afee4d92dde49adfe3af2ccd75ff
+guid: b162b712b2d3dfb4fa90b3eb7f64a56e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: defaultMat
-    second: {fileID: 2100000, guid: 96a0482cfb09ebb4f9dc50b6b2122d52, type: 2}
+      name: wood
+    second: {fileID: 2100000, guid: babd990e97bf9464ea5b1e63e4185695, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -53,7 +53,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
