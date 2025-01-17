@@ -16,7 +16,6 @@ public class Menu : MonoBehaviour {
     // Panels (Menu Screens)
     public GameObject WelcomePanelObject;
     public GameObject OptionsPanelObject;
-    public GameObject SavePanelObject;
     public GameObject DevPanelObject;
 
     [SerializeField]
@@ -92,7 +91,6 @@ public class Menu : MonoBehaviour {
             DevCodeSent = true;
             WelcomePanelObject.SetActive(false);
             OptionsPanelObject.SetActive(false);
-            SavePanelObject.SetActive(false);
             DevPanelObject.SetActive(true);
             Invoke("ResetDevCode", 1f);
         }
