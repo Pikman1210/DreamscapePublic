@@ -51,8 +51,6 @@ public class Menu : MonoBehaviour {
 
     public void Quit()
     {
-        Debug.Log("Quit");
-        Application.Quit();
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #elif UNITY_WEBPLAYER
@@ -84,48 +82,6 @@ public class Menu : MonoBehaviour {
     {
         Screen.fullScreen = isFullscreen;
     }
-
-    // Sava Data Menu
-    /*
-    public void LoadSaveData ()
-    {
-        string SecretBeaten = PlayerPrefs.GetString("SecretBeaten", "false");
-        SecretBeatenText.text = SecretBeaten;
-
-        int HighScore = PlayerPrefs.GetInt("Level", 0);
-        HighScoreSaveText.text = HighScore.ToString();
-
-        float EndlessHighscore = PlayerPrefs.GetFloat("EndlessHighscore", 0);
-        EndlessScoreText.text = EndlessHighscore.ToString("0");
-    }
-
-    public void ResetSavaData ()
-    {
-        PlayerPrefs.DeleteAll();
-        PlayerPrefs.SetInt("Level", 1);
-    }
-
-    public void EditSaveData (int Data)
-    {
-        switch (Data)
-        {
-            case 1:
-                PlayerPrefs.SetString("SecretBeaten", "true");
-                break;
-            case 2:
-                int HighScore = PlayerPrefs.GetInt("Level");
-                if (HighScore < 5f)
-                {
-                    HighScore = HighScore + 1;
-                    PlayerPrefs.SetInt("Level", HighScore);
-                    break;
-                }
-                break;
-            default:
-                Debug.LogError("Debug menu's shit is fucked");
-                break;
-        }
-    }*/
 
     // Dev tools
     private void FixedUpdate()
