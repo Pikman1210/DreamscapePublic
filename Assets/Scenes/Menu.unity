@@ -5122,10 +5122,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531717892}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 3
+      - m_Target: {fileID: 1992977882}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: PlayGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5393,6 +5393,8 @@ GameObject:
   - component: {fileID: 1164335857}
   - component: {fileID: 1164335856}
   - component: {fileID: 1164335859}
+  - component: {fileID: 1164335860}
+  - component: {fileID: 1164335861}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5417,7 +5419,7 @@ Camera:
   m_GameObject: {fileID: 1164335855}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -5518,6 +5520,39 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!95 &1164335860
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164335855}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e0b5cb8dcc08b54ab7f0b2bbefce627, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1164335861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164335855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba4d953983e89f418a32b2e42657ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1185278748
 GameObject:
   m_ObjectHideFlags: 0
@@ -6889,18 +6924,6 @@ MonoBehaviour:
   flicker: 1
   timeDelayMin: 0.01
   timeDelayMax: 0.4
---- !u!114 &1531717892 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3019363571560431060, guid: 04e185577ea157249846341c06ce497c,
-    type: 3}
-  m_PrefabInstance: {fileID: 6081582917199480492}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5008a23571534040a3333d66cc2af34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1536604592
 GameObject:
   m_ObjectHideFlags: 0
@@ -8880,6 +8903,10 @@ MonoBehaviour:
   OptionsPanelObject: {fileID: 321458846}
   DevPanelObject: {fileID: 315611171}
   DevCodeSent: 0
+  MenuMainCamera: {fileID: 1164335857}
+  MenuCanvas: {fileID: 1992977877}
+  CameraAnimator: {fileID: 1164335860}
+  FlickerControl: {fileID: 1530021554}
 --- !u!1001 &2036135306
 PrefabInstance:
   m_ObjectHideFlags: 0

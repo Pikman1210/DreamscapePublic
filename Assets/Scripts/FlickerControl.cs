@@ -37,4 +37,9 @@ public class FlickerControl : MonoBehaviour
         yield return new WaitForSeconds(timeDelay);
         isFlickering = false;
     }
+
+    public void SetFlicker(bool active)
+    {
+        flicker = active;
+    }
 }

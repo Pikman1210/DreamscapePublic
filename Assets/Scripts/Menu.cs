@@ -4,6 +4,7 @@ using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using QFSW.QC;
 
 public class Menu : MonoBehaviour {
 
@@ -20,6 +21,12 @@ public class Menu : MonoBehaviour {
 
     [SerializeField]
     private bool DevCodeSent = false;
+
+    // Camera Animation
+    public Camera MenuMainCamera;
+    public GameObject MenuCanvas;
+    public Animator CameraAnimator;
+    public FlickerControl FlickerControl;
 
     Resolution[] resolutions;
 
@@ -96,6 +103,8 @@ public class Menu : MonoBehaviour {
         }
     }
 
+    [Command]
+    [CommandDescription("For if DevCodeSent gets stuck at true")]
     private void ResetDevCode()
     {
         DevCodeSent = false;
@@ -104,6 +113,14 @@ public class Menu : MonoBehaviour {
     public void LoadCustomScene(string index)
     {
         SceneManager.LoadScene(index);
+    }
+
+    [Command]
+    public void PlayGame()
+    {
+        FlickerControl.flicker = false; // Makes the light constant
+        CameraAnimator.SetTrigger("StartZoom"); // Plays the camera animation
+        MenuCanvas.SetActive(false); // Turns UI off
     }
 
 }

@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [Command("ReloadScene")]
+    [CommandDescription("Reloads the current scene without async")]
     public void LegacyRestart() // Reloads current scene without level manager
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -59,5 +61,18 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime((float)0.2); // To let the loading screen scene itself fully load
         FindObjectOfType<LoadManagerLocal>().StartSceneLoading(sceneIndex); // Call the LoadManagerLocal to load the actual scene
+    }
+
+    [Command("QuitGame")]
+    [CommandDescription("Quits the game")]
+    public void Quit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#elif UNITY_WEBPLAYER
+        Application.OpenURL(webplayerQuitURL);
+#else
+        Application.Quit();
+#endif
     }
 }
