@@ -1,5 +1,9 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
+using QFSW.QC;
 
 // To reference the GameManager, use GameManager.Instance.publicScriptName   VERY IMPORTANT
 public class GameManager : MonoBehaviour
@@ -40,5 +44,20 @@ public class GameManager : MonoBehaviour
     public void LegacyRestart() // Reloads current scene without level manager
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    // Switch to loading screen scene, then start timer before actual call to LoadManagerLocal
+    [Command]
+    [CommandDescription("Load a scene by index")]
+    public void LoadScene(int sceneIndex)
+    {
+        SceneManager.LoadSceneAsync("LoadingScreen");
+        StartCoroutine(StartSceneLoadingCoroutine(sceneIndex));
+    }
+
+    private IEnumerator StartSceneLoadingCoroutine(int sceneIndex)
+    {
+        yield return new WaitForSecondsRealtime((float)0.2); // To let the loading screen scene itself fully load
+        FindObjectOfType<LoadManagerLocal>().StartSceneLoading(sceneIndex); // Call the LoadManagerLocal to load the actual scene
     }
 }
