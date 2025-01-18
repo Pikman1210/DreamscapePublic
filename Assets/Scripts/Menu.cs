@@ -4,6 +4,7 @@ using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using QFSW.QC;
 
 public class Menu : MonoBehaviour {
 
@@ -16,11 +17,16 @@ public class Menu : MonoBehaviour {
     // Panels (Menu Screens)
     public GameObject WelcomePanelObject;
     public GameObject OptionsPanelObject;
-    public GameObject SavePanelObject;
     public GameObject DevPanelObject;
 
     [SerializeField]
     private bool DevCodeSent = false;
+
+    // Camera Animation
+    public Camera MenuMainCamera;
+    public GameObject MenuCanvas;
+    public Animator CameraAnimator;
+    public FlickerControl FlickerControl;
 
     Resolution[] resolutions;
 
@@ -51,8 +57,6 @@ public class Menu : MonoBehaviour {
 
     public void Quit()
     {
-        Debug.Log("Quit");
-        Application.Quit();
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #elif UNITY_WEBPLAYER
@@ -85,48 +89,6 @@ public class Menu : MonoBehaviour {
         Screen.fullScreen = isFullscreen;
     }
 
-    // Sava Data Menu
-    /*
-    public void LoadSaveData ()
-    {
-        string SecretBeaten = PlayerPrefs.GetString("SecretBeaten", "false");
-        SecretBeatenText.text = SecretBeaten;
-
-        int HighScore = PlayerPrefs.GetInt("Level", 0);
-        HighScoreSaveText.text = HighScore.ToString();
-
-        float EndlessHighscore = PlayerPrefs.GetFloat("EndlessHighscore", 0);
-        EndlessScoreText.text = EndlessHighscore.ToString("0");
-    }
-
-    public void ResetSavaData ()
-    {
-        PlayerPrefs.DeleteAll();
-        PlayerPrefs.SetInt("Level", 1);
-    }
-
-    public void EditSaveData (int Data)
-    {
-        switch (Data)
-        {
-            case 1:
-                PlayerPrefs.SetString("SecretBeaten", "true");
-                break;
-            case 2:
-                int HighScore = PlayerPrefs.GetInt("Level");
-                if (HighScore < 5f)
-                {
-                    HighScore = HighScore + 1;
-                    PlayerPrefs.SetInt("Level", HighScore);
-                    break;
-                }
-                break;
-            default:
-                Debug.LogError("Debug menu's shit is fucked");
-                break;
-        }
-    }*/
-
     // Dev tools
     private void FixedUpdate()
     {
@@ -136,12 +98,13 @@ public class Menu : MonoBehaviour {
             DevCodeSent = true;
             WelcomePanelObject.SetActive(false);
             OptionsPanelObject.SetActive(false);
-            SavePanelObject.SetActive(false);
             DevPanelObject.SetActive(true);
             Invoke("ResetDevCode", 1f);
         }
     }
 
+    [Command]
+    [CommandDescription("For if DevCodeSent gets stuck at true")]
     private void ResetDevCode()
     {
         DevCodeSent = false;
@@ -150,6 +113,14 @@ public class Menu : MonoBehaviour {
     public void LoadCustomScene(string index)
     {
         SceneManager.LoadScene(index);
+    }
+
+    [Command]
+    public void PlayGame()
+    {
+        FlickerControl.flicker = false; // Makes the light constant
+        CameraAnimator.SetTrigger("StartZoom"); // Plays the camera animation
+        MenuCanvas.SetActive(false); // Turns UI off
     }
 
 }
