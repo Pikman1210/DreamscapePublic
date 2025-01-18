@@ -1067,7 +1067,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 8.27, y: 4.06}
   m_BounceIntensity: 1
@@ -1303,7 +1303,7 @@ ReflectionProbe:
   m_FarClip: 1000
   m_ShadowDistance: 100
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.25849947, g: 0.29355386, b: 0.3490566, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1341,6 +1341,7 @@ GameObject:
   - component: {fileID: 1985704779}
   - component: {fileID: 1985704778}
   - component: {fileID: 1985704777}
+  - component: {fileID: 1985704780}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -1448,6 +1449,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1985704780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985704776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51504b54b07c69f45aae9322b6bb45d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flicker: 1
+  timeDelayMin: 0.1
+  timeDelayMax: 0.6
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
