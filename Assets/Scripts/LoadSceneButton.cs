@@ -23,7 +23,7 @@ public class LoadSceneButton : MonoBehaviour
 
         if (SceneExists(sceneID))
         {
-            LoadManagerGlobal.Instance.LoadScene(sceneID); // Load the scene by calling the LoadManager
+            GameManager.Instance.LoadScene(sceneID); // Load the scene by calling the GameManager
         }
         else
         {
