@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using System;
+using QFSW.QC;
 
 // To refernce the AudioManager, use AudioManager.Instance.publicScriptName   VERY IMPORTANT
 public class AudioManager : MonoBehaviour {
@@ -60,6 +61,8 @@ public class AudioManager : MonoBehaviour {
             Play("MenuMusic");
     }*/
 
+    [Command("PlayAudio")]
+    [CommandDescription("Play audio clip by name")]
     public void Play (string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -71,6 +74,8 @@ public class AudioManager : MonoBehaviour {
         s.source.Play();
     }
 
+    [Command("StopAudio")]
+    [CommandDescription("Stop audio clip by name")]
     public void Stop (string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
