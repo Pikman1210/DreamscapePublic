@@ -53,13 +53,14 @@ public class GameManager : MonoBehaviour
     [CommandDescription("Load a scene by index")]
     public void LoadScene(int sceneIndex)
     {
-        SceneManager.LoadSceneAsync("LoadingScreen");
+        // SceneManager.LoadScene("LoadingScreen");
         StartCoroutine(StartSceneLoadingCoroutine(sceneIndex));
     }
 
     private IEnumerator StartSceneLoadingCoroutine(int sceneIndex)
     {
-        yield return new WaitForSecondsRealtime((float)0.2); // To let the loading screen scene itself fully load
+        // yield return new WaitForSecondsRealtime((float)0.2); // To let the loading screen scene itself fully load
+        yield return SceneManager.LoadSceneAsync("LoadingScreen");
         FindObjectOfType<LoadManagerLocal>().StartSceneLoading(sceneIndex); // Call the LoadManagerLocal to load the actual scene
     }
 
