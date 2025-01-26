@@ -140,7 +140,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Cursor is now visible and unlocked");
         } else
         {
-            Debug.Log("Invalid status. Returning");
+            Debug.LogWarning("Invalid status.");
         }
     }
 }
