@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Console command functions
     [Command("reload-scene-custom")]
     [CommandDescription("Reloads the current scene without async")]
     public void LegacyRestart() // Reloads current scene without level manager
@@ -141,6 +142,16 @@ public class GameManager : MonoBehaviour
         } else
         {
             Debug.LogWarning("Invalid status.");
+        }
+    }
+
+    [Command("list-scenes-in-build")]
+    [CommandDescription("List all scenes in build settings")]
+    public void ListAllScenesInBuild()
+    {
+        for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+        {
+            Debug.Log("Scene " + i + ": " + SceneUtility.GetScenePathByBuildIndex(i));
         }
     }
 }
