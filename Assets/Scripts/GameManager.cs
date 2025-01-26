@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using QFSW.QC;
+using QFSW.QC.Actions;
 
 // To reference the GameManager, use GameManager.Instance.publicScriptName   VERY IMPORTANT
 public class GameManager : MonoBehaviour
@@ -41,7 +42,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    [Command("ReloadScene")]
+    [Command("reload-scene-custom")]
     [CommandDescription("Reloads the current scene without async")]
     public void LegacyRestart() // Reloads current scene without level manager
     {
@@ -49,7 +50,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Switch to loading screen scene, then start timer before actual call to LoadManagerLocal
-    [Command]
+    [Command("load-scene-custom")]
     [CommandDescription("Load a scene by index")]
     public void LoadScene(int sceneIndex)
     {
@@ -63,7 +64,7 @@ public class GameManager : MonoBehaviour
         FindObjectOfType<LoadManagerLocal>().StartSceneLoading(sceneIndex); // Call the LoadManagerLocal to load the actual scene
     }
 
-    [Command("QuitGame")]
+    [Command("quit")]
     [CommandDescription("Quits the game")]
     public void Quit()
     {
@@ -74,5 +75,72 @@ public class GameManager : MonoBehaviour
 #else
         Application.Quit();
 #endif
+    }
+
+    [Command("load-testing-scene")]
+    [CommandDescription("Load the player testing scene")]
+    public void LoadTestingScene()
+    {
+        LoadScene(3);
+    }
+
+    [Command("cursor")]
+    [CommandDescription("Change cursor status. Visible, Lock, Confine, None.")]
+    public void CursorStatus(string status)
+    {
+        if (status == "visible")
+        {
+            if (Cursor.visible == false)
+            {
+                Cursor.visible = true;
+                Debug.Log("Cursor is now visible");
+            }
+            else if (Cursor.visible == true)
+            {
+                Cursor.visible = false;
+                Debug.Log("Cursor is now invisible");
+            } else
+            {
+                Debug.LogError("Error in cursor visibility");
+            }
+        } else if (status == "lock")
+        {
+            if (Cursor.lockState == CursorLockMode.Locked)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Debug.Log("Cursor is now unlocked");
+            }
+            else if (Cursor.lockState == CursorLockMode.None)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Debug.Log("Cursor is now locked");
+            } else
+            {
+                Debug.LogError("Error in cursor locking");
+            }
+        } else if (status == "confine")
+        {
+            if (Cursor.lockState == CursorLockMode.Confined)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Debug.Log("Cursor is now unconfined");
+            }
+            else if (Cursor.lockState == CursorLockMode.None)
+            {
+                Cursor.lockState = CursorLockMode.Confined;
+                Debug.Log("Cursor is now confined");
+            } else
+            {
+                Debug.LogError("Error in cursor confinement");
+            }
+        } else if (status == "none")
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Debug.Log("Cursor is now visible and unlocked");
+        } else
+        {
+            Debug.Log("Invalid status. Returning");
+        }
     }
 }
