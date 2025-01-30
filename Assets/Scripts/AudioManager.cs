@@ -61,7 +61,7 @@ public class AudioManager : MonoBehaviour {
             Play("MenuMusic");
     }*/
 
-    [Command("PlayAudio")]
+    [Command("play-audio")]
     [CommandDescription("Play audio clip by name")]
     public void Play (string name)
     {
@@ -74,7 +74,7 @@ public class AudioManager : MonoBehaviour {
         s.source.Play();
     }
 
-    [Command("StopAudio")]
+    [Command("stop-audio")]
     [CommandDescription("Stop audio clip by name")]
     public void Stop (string name)
     {
@@ -87,4 +87,14 @@ public class AudioManager : MonoBehaviour {
         s.source.Stop();
     }
 
-}
+    [Command("stop-all-audio")]
+    [CommandDescription("Stop all audio playing")]
+    public void StopAllAudio()
+    {
+        foreach (Sound s in sounds)
+        {
+            s.source.Stop();
+        }
+    }
+
+    }

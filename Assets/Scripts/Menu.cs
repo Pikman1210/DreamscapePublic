@@ -110,6 +110,18 @@ public class Menu : MonoBehaviour {
         DevCodeSent = false;
     }
 
+    [Command("dev-menu")]
+    [CommandDescription("Open the dev menu")]
+    private void SendDevCode()
+    {
+        Debug.Log("Dev Code");
+        DevCodeSent = true;
+        WelcomePanelObject.SetActive(false);
+        OptionsPanelObject.SetActive(false);
+        DevPanelObject.SetActive(true);
+        Invoke("ResetDevCode", 1f);
+    }
+
     public void LoadCustomScene(string index)
     {
         SceneManager.LoadScene(index);

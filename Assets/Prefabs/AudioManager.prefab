@@ -45,10 +45,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: UI-Click
+  - name: ClickSFX
     clip: {fileID: 8300000, guid: bf259911daebca346b18e1d4d65f7c96, type: 3}
-    group: {fileID: 24300002, guid: 2630f9522c7a3e348abd3b2ffbb42029, type: 2}
+    group: {fileID: 2693036605890829357, guid: 2630f9522c7a3e348abd3b2ffbb42029, type: 2}
     volume: 1
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  - name: MenuTheme
+    clip: {fileID: 8300000, guid: 66189cbb91ead4845969c64cf0243eb3, type: 3}
+    group: {fileID: 2369372791343395141, guid: 2630f9522c7a3e348abd3b2ffbb42029, type: 2}
+    volume: 0.53
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: LevelSelectTheme
+    clip: {fileID: 8300000, guid: 78b4ab18c1b71c547ac7cf457eccc11a, type: 3}
+    group: {fileID: 2369372791343395141, guid: 2630f9522c7a3e348abd3b2ffbb42029, type: 2}
+    volume: 0.109
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
