@@ -156,10 +156,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    [Command("fog-settings")]
-    [CommandDescription("Change fog settings.")]
-    public void FogSettings()
+    [Command("fog-enabled")]
+    public void FogEnabled(bool status)
     {
-        Debug.Log("Change fog settings");
+        if (status == true)
+        {
+            RenderSettings.fog = true;
+        } else if (status == false)
+        {
+            RenderSettings.fog = false;
+        } else
+        {
+            return;
+        }
     }
 }
