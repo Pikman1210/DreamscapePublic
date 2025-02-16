@@ -66,3 +66,10 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: FlashlightClick
+    clip: {fileID: 8300000, guid: acee8b2de615c144da7cb4600567e8f3, type: 3}
+    group: {fileID: 2693036605890829357, guid: 2630f9522c7a3e348abd3b2ffbb42029, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
