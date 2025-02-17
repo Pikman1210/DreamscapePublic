@@ -62,7 +62,7 @@ MonoBehaviour:
   - name: LevelSelectTheme
     clip: {fileID: 8300000, guid: 78b4ab18c1b71c547ac7cf457eccc11a, type: 3}
     group: {fileID: 2369372791343395141, guid: 2630f9522c7a3e348abd3b2ffbb42029, type: 2}
-    volume: 0.109
+    volume: 0.04
     pitch: 1
     loop: 1
     source: {fileID: 0}
