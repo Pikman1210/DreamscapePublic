@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using QFSW.QC;
 
 public class LevelDisplay : MonoBehaviour
 {
@@ -35,6 +34,17 @@ public class LevelDisplay : MonoBehaviour
         descriptionText.text = description;
         // spriteObject.sprite = image;
         // playButton.interactable = playable;
+    }
+
+    [Command("level-menu-fix")]
+    public void ResetMenuValue()
+    {
+        GameManager.Instance.UpdateValueBool(0, false);
+    }
+
+    public void OnPlayButtonPressed()
+    {
+        GameManager.Instance.LoadScene(levelIndex);
     }
 
 }

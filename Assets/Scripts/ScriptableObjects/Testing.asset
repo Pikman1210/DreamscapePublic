@@ -17,4 +17,4 @@ MonoBehaviour:
   description: Bar
   image: {fileID: 0}
   levelIndex: 3
-  playable: 1
+  playable: 0

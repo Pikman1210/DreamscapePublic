@@ -9,6 +9,8 @@ using QFSW.QC.Actions;
 // To reference the GameManager, use GameManager.Instance.publicScriptName   VERY IMPORTANT
 public class GameManager : MonoBehaviour
 {
+    public bool levelSelectMenu = false;
+
     private static GameManager _instance;
 
     public static GameManager Instance
@@ -42,7 +44,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Console command functions
+    [Command]
+    public void UpdateValueBool(int index, bool value)
+    {
+        switch (index)
+        {
+            case 0:
+                levelSelectMenu = value;
+                break;
+            default:
+                Debug.LogWarning("Invalid index");
+                break;
+        }
+    }
+
     [Command("reload-scene-custom")]
     [CommandDescription("Reloads the current scene without async")]
     public void LegacyRestart() // Reloads current scene without level manager
