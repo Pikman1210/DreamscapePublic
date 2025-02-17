@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bbad03d11f62e54a8e6341b0ed022e8, type: 3}
+  m_Name: MenuSubtitle
+  m_EditorClassIdentifier: 
+  strings:
+  - A one hell of a Humanities project
+  - A mistake
+  - A silly project
+  - Flavor text!
+  - Help me I'm stuck in this game's subtitle text and this is the only way I can
+    communicate please help
+  - A one hell of a Humanities project
+  - A one hell of a Humanities project
+  - A one hell of a Humanities project
+  - A mistake
+  - A mistake
+  - A silly project
