@@ -1,54 +1,9 @@
 fileFormatVersion: 2
-guid: 1765a77d28f90694fa2c5ffe7db4286d
+guid: 5c27bee0895539e4dbf4109d1194f619
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BeigeWalls
-    second: {fileID: 2100000, guid: 151402fab113a25499735261da8d3b4d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BuildingMat-00103.001
-    second: {fileID: 2100000, guid: f0af8e526febc2f4b9160af61b035ba0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BuildingMat-00104.001
-    second: {fileID: 2100000, guid: e033b067917f9d847a00beabdc4eb0ad, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BuildingMat-00105.001
-    second: {fileID: 2100000, guid: 462cfc37f5403e74cbef56bc2c69344c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Floor
-    second: {fileID: 2100000, guid: 6c288b256ac09ca48936a2cef0b4badf, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: FrontFloor
-    second: {fileID: 2100000, guid: f73e7de5856d41d4ba730f775ff492d9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: FrontPillars
-    second: {fileID: 2100000, guid: a25fb1af50c9f7b468ae33b2842be904, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: OutsidePillar
-    second: {fileID: 2100000, guid: cbf4f809549a22d45a1cc49d63120902, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Windows
-    second: {fileID: 2100000, guid: 62cee571f8faf8c4ea379f94402b9bba, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -82,7 +37,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
@@ -93,12 +48,12 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
     bakeAxisConversion: 0
-    preserveHierarchy: 1
+    preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
@@ -138,11 +93,11 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1

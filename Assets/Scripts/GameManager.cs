@@ -155,4 +155,19 @@ public class GameManager : MonoBehaviour
             Debug.Log("Scene " + i + ": " + SceneUtility.GetScenePathByBuildIndex(i));
         }
     }
+
+    [Command("fog-enabled")]
+    public void FogEnabled(bool status)
+    {
+        if (status == true)
+        {
+            RenderSettings.fog = true;
+        } else if (status == false)
+        {
+            RenderSettings.fog = false;
+        } else
+        {
+            return;
+        }
+    }
 }
