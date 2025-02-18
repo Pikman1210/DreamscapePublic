@@ -6,5 +6,6 @@ public class TextObject : ScriptableObject
 {
 
     public string[] strings;
+    public int[] weight;
 
 }
