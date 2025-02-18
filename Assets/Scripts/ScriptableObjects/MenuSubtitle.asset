@@ -34,7 +34,7 @@ MonoBehaviour:
     line, and run as long as possible. The second time you fail to complete a lap
     before the sound, your test is over. The test will begin on the word start. On
     your mark, get ready, start."
-  - Hola señor Holton.
+  - "Hola se\xF1or Holton."
   - i think i took a wrong turn this isnt minecraft's subtitle
   - A one hell of a Humanities project
   - A one hell of a Humanities project
@@ -54,18 +54,20 @@ MonoBehaviour:
   - To reach the unreachable star!
   - To reach the unreachable star!
   - To reach the unreachable star!
-  - ¡Por alcanzar la estrella inalcanzable!
-  - ¡Por alcanzar la estrella inalcanzable!
-  - ¡Por alcanzar la estrella inalcanzable!
+  - "\xA1Por alcanzar la estrella inalcanzable!"
+  - "\xA1Por alcanzar la estrella inalcanzable!"
+  - "\xA1Por alcanzar la estrella inalcanzable!"
   - Let's go gamling!
-  - Don Quixote (Hangul 돈키호테, Don khihothe), real name Sancho, is designated Sinner #3 of Limbus Company's LCB department.
+  - "Don Quixote (Hangul \uB3C8\uD0A4\uD638\uD14C, Don khihothe), real name Sancho,
+    is designated Sinner #3 of Limbus Company's LCB department."
   - Lawson stop spamming PK Fire
   - You should play Limbus Company
   - This project took wayyyy too long to make...
   - ...but it was pretty fun.
   - ...and his music was electric.
   - This is NOT the story of a Man named Stanley
-  - 25% chance to fire chain lightning for 80% TOTAL damage on up to 3 (+2 per stack) targets within 20m (+2m per stack).
+  - 25% chance to fire chain lightning for 80% TOTAL damage on up to 3 (+2 per stack)
+    targets within 20m (+2m per stack).
   - Maurice says "Hi" to Alexander, Sam, and Wilco
   - Thank you to our sponsor ____ for sponsoring...
   - Play Terraria/Minecraft/Rimworld...
@@ -78,13 +80,21 @@ MonoBehaviour:
   - Red 40 edition!
   - Hey we're CostCo Guys, of course we eat the double chunk chocolate cookie
   - Try the chicken bake
-  - "A visitor? Hmm… Indeed, I have slept long enough. The kingdom of heaven has long since forgotten my name, and I am EAGER to make them remember. However, the blood of Minos stains your hands, and I must admit… I'm curious about your skills, weapon. And so, before I tear down the cities and CRUSH the armies of Heaven… You shall do as an appetizer. Come forth, Child of Man… And DIE."
-  - "Ahh… Free at last. O, Gabriel. Now dawns thy reckoning, and thy gore shall glisten before the temples of man. Creature of steel, My gratitude upon thee for my freedom, but the crimes thy kind have committed against humanity are NOT forgotten. And thy punishment.. is DEATH!"
+  - "A visitor? Hmm\u2026 Indeed, I have slept long enough. The kingdom of heaven
+    has long since forgotten my name, and I am EAGER to make them remember. However,
+    the blood of Minos stains your hands, and I must admit\u2026 I'm curious about
+    your skills, weapon. And so, before I tear down the cities and CRUSH the armies
+    of Heaven\u2026 You shall do as an appetizer. Come forth, Child of Man\u2026
+    And DIE."
+  - "Ahh\u2026 Free at last. O, Gabriel. Now dawns thy reckoning, and thy gore shall
+    glisten before the temples of man. Creature of steel, My gratitude upon thee
+    for my freedom, but the crimes thy kind have committed against humanity are NOT
+    forgotten. And thy punishment.. is DEATH!"
   - If I found the right angle, you can find the right baddie. Stay calculated gang.
   - Guys street signs are free I own 50 stop signs you just need some tools
   - Park geese are free I own 28
   - there's no laws on the pokemon batman...
-  - Optimus Prime With the All Spark gone, we cannot return life to our planet. And fate has yielded its reward: a new world to call home. We live among its people now, hiding in plain sight, but watching over them in secret, waiting, protecting. I have witnessed their capacity for courage, and though we are worlds apart, like us, there's more to them than meets the eye. I am Optimus Prime, and I send this message to any surviving Autobots taking refuge among the stars. We are here. We are waiting.
+  - .
   - DO eat the yellow snow
   - DONT eat the yellow snow
   - can we get a mountain dew code red is mid, signed Brock
@@ -94,7 +104,8 @@ MonoBehaviour:
   - DO NOT USE THUNDERWAVE
   - 3 cubic ft room, i cast 9th level fireball
   - its pronounced gif
-  - we spent like 20 minutes going through mountain dew flavors and rating them while writing these
+  - we spent like 20 minutes going through mountain dew flavors and rating them while
+    writing these
   - takis are SERIOUSLY intense
   - this is how it feels to chew 5 gum
   - i dont know
@@ -103,7 +114,9 @@ MonoBehaviour:
   - hi eeveeKat
   - hi Lola
   - hi Nancy
-  - 😺
+  - "\U0001F63A"
   - brock is a meanie and wont give me ideas
   - walmart
-  - Statement recorded direct from subject, statement recorded by Jonathen Sims, The Archivist
+  - Statement recorded direct from subject, statement recorded by Jonathen Sims,
+    The Archivist
+  weight: 
